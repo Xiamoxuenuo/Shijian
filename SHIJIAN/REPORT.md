@@ -172,19 +172,19 @@
 
 ​		首先在github上fork样例工程，并复制web URL。
 
-![image-20230103173545710](C:\Users\13483\AppData\Roaming\Typora\typora-user-images\image-20230103173545710.png)
+[![1.png](https://i.postimg.cc/J468BSXW/1.png)](https://postimg.cc/fJ9pG25H)
 
 ​		在IDEA中用选择Git-Clone克隆工程。
 
-![image-20230103173605706](C:\Users\13483\AppData\Roaming\Typora\typora-user-images\image-20230103173605706.png)
+[![2.png](https://i.postimg.cc/gkJFd4Tt/2.png)](https://postimg.cc/23PX7dmn)
 
 ​		在弹出的窗口中用URL完成克隆。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps45.jpg) 
+[![3.png](https://i.postimg.cc/P5pgvJhm/3.png)](https://postimg.cc/DShjt2SZ)
 
 ​		精读样例工程软件代码后画出类图。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps46.jpg)
+[![4.png](https://i.postimg.cc/G3XVMGmF/4.png)](https://postimg.cc/5jFsyHvy)
 
 
 
@@ -204,19 +204,19 @@
 
 ​		首先定义一张哈希图，用来存储命令列表。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps47.jpg) 
+[![5.png](https://i.postimg.cc/XYCP7PcL/5.png)](https://postimg.cc/ZWJHwVQv)
 
 ​		初始化时定义哈希表类型的commandList。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps48.jpg) 
+[![6.png](https://i.postimg.cc/xC0p51rp/6.png)](https://postimg.cc/cKbc4ZLf) 
 
 ​		通过setCommandList()方法为commandList赋初值。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps49.jpg) 
+[![7.png](https://i.postimg.cc/zvvtm2Gn/7.png)](https://postimg.cc/BPWcHgD6) 
 
 ​		在处理用户输入的指令时只要在哈希图中匹配相应命令对应的方法执行即可。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps50.jpg) 
+[![8.png](https://i.postimg.cc/sDZmphQD/8.png)](https://postimg.cc/mtB74hy0) 
 
 ​		经过这样修改，添加新的命令后执行时不需要if-else语句去匹配，只需要设置一条新的命令，在setCommandList()方法中把命令和方法匹配即可。
 
@@ -230,25 +230,25 @@
 
 ​		在Room类中新定义一个方法addItem()用来在载入地图时直接给房间添加物品，添加时需要给出物品名称、物品介绍和物品重量。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps51.jpg) 
+[![9.png](https://i.postimg.cc/FKGV9bqG/9.png)](https://postimg.cc/06MwnS9J) 
 
 ​		在Game类中初始化房间时调用该方法，theater是一个房间。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps52.jpg) 
+[![10.png](https://i.postimg.cc/kM2zpD6L/10.png)](https://postimg.cc/DmKxWvcc) 
 
 ​		在Game类中定义look()方法，对应look命令，以实现查看查看当前房间的信息以及房间内的所有物品信息的功能。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps53.jpg) 
+[![11.png](https://i.postimg.cc/k55fRhWL/11.png)](https://postimg.cc/K1dndfq5) 
 
 ​		其中getLongDescription()是调用了Room类中的getLongDescription()方法，用来展示房间的完整信息。该方法中调用了Room类的getExitString()方法用来获取出口信息。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps54.jpg) 
+[![12.png](https://i.postimg.cc/SN7rTprw/12.png)](https://postimg.cc/JG0Z0vSq) 
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps55.jpg) 
+[![13.png](https://i.postimg.cc/4d9vzCy2/13.png)](https://postimg.cc/yg7SHbF0) 
 
 ​		look()中的showItems()方法是定义在Room类中用来展示当前房间内物品信息的方法。首先判断该房间中是否有物品，有物品就通过循环打印物品信息，包括物品序号、物品名称、物品介绍和物品重量。获取物品的名称、介绍和重量时进行了封装，再Item类中定义了这三个方法，这里不再展示。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps56.jpg)
+[![14.png](https://i.postimg.cc/yxhFbFFF/14.png)](https://postimg.cc/MfTMcf3T)
 
 
 
@@ -258,11 +258,11 @@
 
 首先在Game类中定义了双端队列path用以记录经过的房间。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps57.jpg) 
+[![15.png](https://i.postimg.cc/02cSK5Z2/15.png)](https://postimg.cc/gnLjfWff) 
 
 ​		实现重复回退，主要是对已经经过的房间计数，如果经过的房间数是一就说明在起点了，不能继续回退。每回退一个房间，通过removeLast()把最后一个房间移除，并通过getLast()获取当前的最后一个房间并将其设置为当前所在房间。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps58.jpg)
+[![16.png](https://i.postimg.cc/qvFCQm9P/16.png)](https://postimg.cc/0zpQyC5n)
 
 
 
@@ -270,15 +270,15 @@
 
 ​		在初始化房间创建传送房间时，给予其特殊的房间类型，将其type值设为1(普通的房间是0)。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps59.jpg) 
+[![17.png](https://i.postimg.cc/HnWxT5q0/17.png)](https://postimg.cc/Ppch4LrN) 
 
 ​		在原有goRoom方法的基础上进行修改
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps60.jpg) 
+[![18.png](https://i.postimg.cc/gkTJPxNR/18.png)](https://postimg.cc/fJYZcR4T) 
 
 ​		在移动到下一个房间时检查房间类型，如果是1说明进入的是传送房间，那么调用随机函数生成一个随机数。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps61.jpg) 
+[![19.png](https://i.postimg.cc/PqkdtYZL/19.png)](https://postimg.cc/tsDKk1By) 
 
 ​		idRoomMap是一个哈希图，通过随机数产生对应的随机房间。
 
@@ -292,15 +292,15 @@
 
 Player类中定义的Player对象。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps62.jpg) 
+[![20.png](https://i.postimg.cc/sx1rncFL/20.png)](https://postimg.cc/hQF6vVt8) 
 
 ​		Game类中游戏开始时创建player对象，提示玩家输入玩家昵称并读入。初始负重能力设置为1000。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps63.jpg) 
+[![21.png](https://i.postimg.cc/ZKdkC0J6/21.png)](https://postimg.cc/HVdvNYcL) 
 
 \2. 玩家可以随身携带任意数量的物件，但随身物品的总重量不能超过某个上限值。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps64.jpg) 
+[![22.png](https://i.postimg.cc/VNz2GRnF/22.png)](https://postimg.cc/VJH75X7S) 
 
 ​		该方法carryItem()用来检查玩家携带的物品总重量是否超过负重能力，如果超过了就返回false，否则将物品放入背包并加上其重量。
 
@@ -308,37 +308,37 @@ Player类中定义的Player对象。
 
 ​		在Game类中定义take()方法，以实现take命令。每个房间中对应的物品会有相应编号，take()通过获取输入的编号确定要拿的物品，然后调用Room类中的delItem()方法将该物品从该房间中删除，然后调用刚才的carryItem()方法检查玩家负重是否超过上限。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps65.jpg) 
+[![23.png](https://i.postimg.cc/yNntwZTC/23.png)](https://postimg.cc/hJz2mhw2) 
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps66.jpg) 
+[![24.png](https://i.postimg.cc/MZjxj9Dc/24.png)](https://postimg.cc/WtjxB6xj) 
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps67.jpg) 
+[![25.png](https://i.postimg.cc/15hS0DCv/25.png)](https://postimg.cc/z3j48H1h) 
 
 ​		检查的结果有两个，如果过没超过负重上限就提示成功拿走物品，否则提示带不走该物品，并调用上文所述Room类中的addItem()方法将物品放回房间。
 
 ​		在Game类中定义了drop()方法，以实现drop命令。通过读入输入的数字，对应背包内相应物品的编号，调用Room类中的addItem()方法将物品加入该房间中并调用Player类中的dropItem()方法将物品从背包中移除。如果丢弃了所有物品会提示，输入错误的编号也会提示。玩家可以通过输入“all”来一次性丢弃所有物品。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps68.jpg) 
+[![26.png](https://i.postimg.cc/9FVSFbNH/26.png)](https://postimg.cc/Yjn8d6Hd) 
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps69.jpg) 
+[![27.png](https://i.postimg.cc/7ZZWS6kB/27.png)](https://postimg.cc/ZCXHSJ03) 
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps70.jpg) 
+[![28.png](https://i.postimg.cc/SKw10fz5/28.png)](https://postimg.cc/5HSSLvgq) 
 
 \4. 在游戏中增加一个新的命令“items”, 可以打印出当前房间内所有的物件及总重量，以及玩家随身携带的所有物件及总重量。
 
 ​		在Game类中定义了showItems()方法，以实现items命令。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps71.jpg) 
+[![29.png](https://i.postimg.cc/zBKtqHCf/29.png)](https://postimg.cc/FdFgZRnt) 
 
 ​		该方法分别调用了Room类的showItems()方法和Player类的showBag()方法来展示当前房间的物品信息和玩家背包中的物品信息，前者前文已经展示过，这里展示后者，其实现逻辑与前者基本一致。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps72.jpg) 
+[![30.png](https://i.postimg.cc/J416WnG1/30.png)](https://postimg.cc/mh5NYTYq) 
 
 \5. 在某个或某些房间中随机增加一个magic cookie（魔法饼干）物件，并增加一个“eat cookie”命令，如果玩家找到并吃掉魔法饼干，就可以增长玩家的负重能力。
 
 ​		在Player类中定义eatCookie()方法以实现eat-cookie命令。玩家输入该命令时检查玩家背包中是否有“magic cookie”，有就将其从玩家背包中删除并增加玩家的负重能力。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps73.jpg) 
+[![31.png](https://i.postimg.cc/htv2f5L6/31.png)](https://postimg.cc/RWr7YGbL) 
 
 
 
@@ -348,75 +348,75 @@ Player类中定义的Player对象。
 
 ​		调用Main类以运行程序，首先提示用户输入用户名，创建新玩家后即可开始游戏。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps74.jpg) 
+[![32.png](https://i.postimg.cc/LsZvVg0V/32.png)](https://postimg.cc/CZSjh50Z) 
 
 ​		输入help指令可以查看可以使用的命令，包括go,quit,help,look,back,take,drop,eat-cookie,items。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps75.jpg) 
+[![33.png](https://i.postimg.cc/CLLNQQQ5/33.png)](https://postimg.cc/c62wKXZG) 
 
 ​		输入look查看当前房间信息和当前房间内物品信息，房间内有一个苹果。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps76.jpg) 
+[![34.png](https://i.postimg.cc/XYrgVy30/34.png)](https://postimg.cc/PCkDyJP6) 
 
 ​		输入take 0拿走苹果。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps77.jpg) 
+[![35.png](https://i.postimg.cc/t48N7CCn/35.png)](https://postimg.cc/bZHtBPnq) 
 
 ​		输入go east进入下一个房间。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps78.jpg) 
+[![36.png](https://i.postimg.cc/d1j2W2RG/36.png)](https://postimg.cc/mzh1kF5r) 
 
 ​		输入items查看当前房间内物品和背包内物品，房间内有一把剑和一个盾牌，玩家背包内有一个苹果。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps79.jpg) 
+[![37.png](https://i.postimg.cc/rpSxm1P7/37.png)](https://postimg.cc/67pybvwh) 
 
 ​		输入drop扔掉苹果，输入items和look查看，房间内有三个物品，玩家背包内没有物品。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps80.jpg) 
+[![38.png](https://i.postimg.cc/FsdfzbfG/38.png)](https://postimg.cc/kBCMhbvt) 
 
 ​		输入take 0拿走sword，输入items查看，房间内有盾牌和苹果，玩家背包中有剑。由于物品减少，物品会自动重新编号。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps81.jpg) 
+[![39.png](https://i.postimg.cc/tCKsx1Wb/39.png)](https://postimg.cc/N5xGhjdC) 
 
 ​		输入take 0拿走shield，提示超过负重能力。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps82.jpg) 
+[![40.png](https://i.postimg.cc/SsxRhcF6/40.png)](https://postimg.cc/jWBt6wj2) 
 
 ​		输入back，回到上个房间。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps83.jpg) 
+[![41.png](https://i.postimg.cc/kMZ40VjS/41.png)](https://postimg.cc/fkcDXbQW) 
 
 ​		输入go south进入下一个房间，输入look查看。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps84.jpg) 
+[![42.png](https://i.postimg.cc/wvn1Q3ZD/42.png)](https://postimg.cc/vgL8Q8Qm) 
 
 ​		输入take 0拿走魔法饼干，输入items查看背包物品，有魔法饼干。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps85.jpg) 
+[![43.png](https://i.postimg.cc/9Q1zNLsm/43.png)](https://postimg.cc/QF9XFJXw) 
 
 ​		输入eat-cookie吃掉饼干，提示负重能力增加。输入items查看物品，魔法饼干已经消失了。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps86.jpg) 
+[![44.png](https://i.postimg.cc/cLJd605W/44.png)](https://postimg.cc/dLgbxPYN) 
 
 ​		回到lecture房间。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps87.jpg) 
+[![45.png](https://i.postimg.cc/y6XKPkMB/45.png)](https://postimg.cc/Wt3xpbpf) 
 
 ​		输入take 1拿走盾牌，此时不会再提示超过负重能力，成功拿走，此时玩家背包既有剑也有盾牌。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps88.jpg)  
+[![46.png](https://i.postimg.cc/T3SvwmDj/46.png)](https://postimg.cc/18pj78M4)  
 
 ​		回到初始房间后输入go north，进入了传送房间，被随机传送到一个房间。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps89.jpg) 
+[![47.png](https://i.postimg.cc/85mYhrj0/47.png)](https://postimg.cc/xJqgQ8Gv) 
 
 ​		输入go west回到起始房间，然后输入go south，再输入go east，再输入两次back，成功回到出发点，实现了逐层退回。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml15368\wps1.jpg) 
+[![48.png](https://i.postimg.cc/ZnfDQtPP/48.png)](https://postimg.cc/xNzRkZ4q) 
 
 ​		输入quit退出。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps90.jpg)
+[![49.png](https://i.postimg.cc/hGFZ60mY/49.png)](https://postimg.cc/G4QjsGqP)
 
 
 
@@ -428,27 +428,27 @@ Player类中定义的Player对象。
 
 首先在IDEA中导入jar包。选择File中的Project Structure选项。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps91.jpg) 
+[![50.png](https://i.postimg.cc/3rbBzB5Z/50.png)](https://postimg.cc/MXVVQ1Gc) 
 
 选择Modules-Dependencies，选择+号导入JARs or Directions导入本地的jar包。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps92.jpg) 
+[![51.png](https://i.postimg.cc/hPk0ttGz/51.png)](https://postimg.cc/4m1c8ZVs) 
 
 新建一个与src同级的文件夹保存测试代码，右键该文件夹，将其设置为测试文件根目录。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps93.jpg) 
+[![52.png](https://i.postimg.cc/6QwLCbnB/52.png)](https://postimg.cc/NKJHc4dn) 
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps94.jpg) 
+[![53.png](https://i.postimg.cc/qRDsVkY7/53.png)](https://postimg.cc/gXRX3PG9) 
 
 右键需要测试的类，选择Go To-Test
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps95.jpg) 
+[![54.png](https://i.postimg.cc/G3NFXmG7/54.png)](https://postimg.cc/JtNHnmTZ) 
 
 勾选需要测试的方法，得到测试类。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps96.jpg) 
+[![55.png](https://i.postimg.cc/R0MKW6xF/55.png)](https://postimg.cc/YvshVS9K) 
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps97.jpg) 
+[![56.png](https://i.postimg.cc/hhW7ch0K/56.png)](https://postimg.cc/1VBzKmTd) 
 
 在测试类中编写测试用例，之后右键要测试的方法即可运行测试。
 
@@ -458,7 +458,7 @@ Player类中定义的Player对象。
 
 1.在CommandTest类中对isUnknown()方法进行测试。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps98.jpg) 
+[![57.png](https://i.postimg.cc/P5dQwFmT/57.png)](https://postimg.cc/mt69xjX5) 
 
 ​		build不是有效命令，故测试结果正确。
 
@@ -468,7 +468,7 @@ Player类中定义的Player对象。
 
 1.在CommandWordsTest类中对isCommand()方法进行测试。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps99.jpg) 
+[![58.png](https://i.postimg.cc/xT2KwFpM/58.png)](https://postimg.cc/Z0wB3jS5) 
 
 ​		help是有效命令而build不是有效命令，故测试结果正确。
 
@@ -478,7 +478,7 @@ Player类中定义的Player对象。
 
 1.在PlayerTest类中对CarryItem()方法进行测试。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps100.jpg) 
+[![59.png](https://i.postimg.cc/FzZ75G1V/59.png)](https://postimg.cc/GT4cvFF4) 
 
 ​		book的重量为150，超过了p1的承重能力100，故函数返回值应为false，取反则为true，测试结果正确。
 
@@ -490,13 +490,13 @@ Player类中定义的Player对象。
 
 ​		在GitHub中新建token，在IDEA中用token登陆GitHub账号，登陆后可以在Settings-Github中看到自己的账号。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps102.jpg) 
+[![60.png](https://i.postimg.cc/j5Y5DB7h/60.png)](https://postimg.cc/yJnB5QnJ) 
 
 ​		点击右上角的push，成功在IDEA中向GitHub提交代码。
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps103.jpg) 
+[![61.png](https://i.postimg.cc/cCX45H5D/61.png)](https://postimg.cc/fSSNVwsX) 
 
-![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps104.jpg)
+[![62.png](https://i.postimg.cc/2Sq82Cdw/62.png)](https://postimg.cc/zyrrfZcb)
 
 
 
