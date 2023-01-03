@@ -410,6 +410,10 @@ Player类中定义的Player对象。
 
 ![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps89.jpg) 
 
+​		输入go west回到起始房间，然后输入go south，再输入go east，再输入两次back，成功回到出发点，实现了逐层退回。
+
+![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml15368\wps1.jpg) 
+
 ​		输入quit退出。
 
 ![img](file:///C:\Users\13483\AppData\Local\Temp\ksohtml1212\wps90.jpg)
